@@ -1,1 +1,11 @@
 @import url("bootstrap.min.css");
+
+body {
+    background-color: #121212;
+    color: white;
+}
+
+.bg-darken {
+    background-color: #1b1b1b;
+    color: white;
+}
