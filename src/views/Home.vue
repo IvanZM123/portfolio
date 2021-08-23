@@ -12,7 +12,7 @@
       <section class="py-3">
         <div class="row justify-content-center">
           <div
-            class="col-12 col-sm-6 col-ms-4 col-lg-3 p-3"
+            class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
             v-for="(item, i) in sectionItems"
             :key="i"
           >
@@ -59,6 +59,12 @@ export default class Home extends Vue {
       subtitle: "2 posts",
       image: "https://image.flaticon.com/icons/png/512/4149/4149770.png",
       color: "danger",
+    },
+    {
+      title: "All Packages",
+      subtitle: "2 packages",
+      image: "https://image.flaticon.com/icons/png/512/3180/3180196.png",
+      color: "primary",
     },
   ];
 }

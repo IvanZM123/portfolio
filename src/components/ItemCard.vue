@@ -48,6 +48,9 @@ export default class ItemCardComponent extends Vue {}
 .bg-yellow-transparent {
   background-color: rgba(243, 156, 18, 0.4);
 }
+.bg-primary-transparent {
+  background-color: rgba(13, 110, 253, 0.4);
+}
 .card-footer {
   background: none;
 }
