@@ -1,9 +1,11 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light py-3 border-0 bg-white">
     <div class="container-fluid">
-      <a class="navbar-brand">
-        <strong>Portfolio</strong>
-      </a>
+      <router-link to="/">
+        <a class="navbar-brand">
+          <strong>Portfolio</strong>
+        </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,11 +19,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page">My proyects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active">My articles</a>
+          <li class="nav-item" v-for="(item, i) in items" :key="i">
+            <router-link :to="{ name: item.text }">
+              <a class="nav-link">{{ item.text }}</a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -33,5 +34,23 @@
 import { Options, Vue } from "vue-class-component";
 
 @Options({})
-export default class NavbarComponent extends Vue {}
+export default class NavbarComponent extends Vue {
+  items: Array<Record<string, string>> = [
+    {
+      text: "Articles",
+    },
+    {
+      text: "Apps",
+    },
+    {
+      text: "Packages",
+    },
+  ];
+}
 </script>
+
+<style scoped>
+a {
+  text-decoration: none;
+}
+</style>

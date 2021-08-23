@@ -10,19 +10,21 @@
       <p class="m-0 text-muted">{{ item.subtitle }}</p>
     </div>
     <div class="card-footer border-0">
-      <button
-        class="
-          btn
-          bg-white
-          shadow
-          d-inline-block
-          rounded-pill
-          text-center
-          w-100
-        "
-      >
-        More information...
-      </button>
+      <router-link :to="{ name: item.route }">
+        <button
+          class="
+            btn
+            bg-white
+            shadow
+            d-inline-block
+            rounded-pill
+            text-center
+            w-100
+          "
+        >
+          More information...
+        </button>
+      </router-link>
     </div>
   </div>
 </template>
