@@ -1,7 +1,7 @@
 <template>
   <div :class="`card border-0 p-3 bg-${item.color}-transparent`">
     <div class="card-body text-center">
-      <div :class="`card-avatar mb-2 bg-${item.color}`">
+      <div :class="`card-avatar mb-2 p-3 bg-${item.color}`">
         <img :src="item.image" alt="Proyects" />
       </div>
       <h5>
@@ -51,6 +51,15 @@ export default class ItemCardComponent extends Vue {}
 .bg-primary-transparent {
   background-color: rgba(13, 110, 253, 0.4);
 }
+.bg-brown-transparent {
+  background-color: rgba(82, 56, 56, 0.4);
+}
+.bg-brown {
+  background-color: #523838;
+}
+.bg-yellow {
+  background-color: rgba(243, 156, 18, 1);
+}
 .card-footer {
   background: none;
 }
@@ -58,8 +67,6 @@ export default class ItemCardComponent extends Vue {}
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  padding: 10px;
-  background-color: #f39c12;
   display: inline-block;
 }
 .card-avatar img {

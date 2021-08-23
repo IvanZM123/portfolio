@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
           <div
             class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
-            v-for="(item, i) in sectionItems"
+            v-for="(item, i) in sections"
             :key="i"
           >
             <item-card-component v-bind:item="item" />
@@ -27,6 +27,8 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
+import { SectionService, Section } from "@/services/section.service";
+
 import CarouselComponent from "@/components/Carousel.vue";
 import ItemCardComponent from "@/components/ItemCard.vue";
 
@@ -37,6 +39,7 @@ import ItemCardComponent from "@/components/ItemCard.vue";
   },
 })
 export default class Home extends Vue {
+  private sectionService: SectionService = new SectionService();
   carouselItems: Array<Record<string, string>> = [
     {
       title: "I'm Fullstack Developer",
@@ -47,25 +50,10 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
-  sectionItems: Array<Record<string, string>> = [
-    {
-      title: "Web applications",
-      subtitle: "5 proyects",
-      image: "https://image.flaticon.com/icons/png/512/2683/2683274.png",
-      color: "yellow",
-    },
-    {
-      title: "All articles",
-      subtitle: "2 posts",
-      image: "https://image.flaticon.com/icons/png/512/4149/4149770.png",
-      color: "danger",
-    },
-    {
-      title: "All Packages",
-      subtitle: "2 packages",
-      image: "https://image.flaticon.com/icons/png/512/3180/3180196.png",
-      color: "primary",
-    },
-  ];
+  sections: Array<Section> = [];
+
+  async created(): Promise<void> {
+    this.sections = await this.sectionService.list();
+  }
 }
 </script>
