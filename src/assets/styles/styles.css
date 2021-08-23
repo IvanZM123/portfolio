@@ -1,13 +1,22 @@
 @import url("bootstrap.min.css");
 
+* {
+    font-family: "Poppins";
+}
+
 body {
     /* background-color: #121212; */
-    background-color: #031f30;
+    /* background-color: #031f30; */
+    /* color: white; */
+}
+
+.bg-purple {
+    background-color: #5a3163;
     color: white;
 }
 
 .bg-darken {
     /* background-color: #1b1b1b; */
-    background-color: #0f1c24;
+    /* background-color: #0f1c24; */
     color: white;
 }
