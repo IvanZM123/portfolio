@@ -23,7 +23,7 @@
 
       <section>
         <div class="row">
-          <div class="col-12 col-lg-8 p-3">
+          <div class="col-12 col-xl-8 p-3">
             <container-dynamic-component
               title="Top Applications"
               subtitle="Take a look at the top apps"
@@ -41,6 +41,13 @@
               </slot>
             </container-dynamic-component>
           </div>
+          <div class="col-12 col-xl-4 p-3">
+            <container-dynamic-component
+              title="Some Articles"
+              subtitle="These are some of my articles."
+            >
+            </container-dynamic-component>
+          </div>
         </div>
       </section>
     </div>
@@ -51,6 +58,7 @@
 import { Options, Vue } from "vue-class-component";
 
 import { SectionService, Section } from "@/services/section.service";
+import { AppService, App } from "@/services/app.service";
 
 import ContainerDynamicComponent from "@/components/ContainerDynamic.vue";
 import CarouselComponent from "@/components/Carousel.vue";
@@ -67,6 +75,7 @@ import AppCardComponent from "@/components/AppCard.vue";
 })
 export default class Home extends Vue {
   private sectionService: SectionService = new SectionService();
+  private appService: AppService = new AppService();
   carouselItems: Array<Record<string, string>> = [
     {
       title: "I'm Fullstack Developer",
@@ -77,56 +86,12 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
-  apps = [
-    {
-      title: "Kampweather",
-      subtitle: "Weather App",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, nobis! Officia totam itaque delectus.",
-      picture:
-        "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1609967502/App_banners/kampweather_vnsrti.png",
-      technologies: [
-        {
-          name: "Typescript",
-          color: "primary",
-        },
-        {
-          name: "Javascript",
-          color: "warning",
-        },
-        {
-          name: "Vue.js",
-          color: "success",
-        },
-      ],
-    },
-    {
-      title: "Vuochat",
-      subtitle: "Instant Messaging",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, nobis! Officia totam itaque delectus.",
-      picture:
-        "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1612023023/App_banners/vuochat_users_q6v2tu.png",
-      technologies: [
-        {
-          name: "Typescript",
-          color: "primary",
-        },
-        {
-          name: "Javascript",
-          color: "warning",
-        },
-        {
-          name: "Node.js",
-          color: "success",
-        },
-      ],
-    },
-  ];
+  apps: Array<App> = [];
   sections: Array<Section> = [];
 
   async created(): Promise<void> {
     this.sections = await this.sectionService.list();
+    this.apps = await this.appService.list();
   }
 }
 </script>

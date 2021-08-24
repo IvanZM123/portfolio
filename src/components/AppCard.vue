@@ -9,7 +9,7 @@
       <div class="d-flex flex-wrap w-100 mb-3">
         <small
           :class="`text-${item.color} mx-1`"
-          v-for="(item, i) in app.technologies"
+          v-for="(item, i) in app.technologies || 0"
           :key="i"
         >
           <strong>{{ item.name }}</strong>
@@ -18,7 +18,9 @@
       <p class="mb-2">
         <strong>{{ app.title }} - {{ app.subtitle }}</strong>
       </p>
-      <small class="text-">{{ app.description }}</small>
+      <div class="card-description">
+        <small>{{ app.description }}</small>
+      </div>
     </div>
     <div class="card-footer bg-darken border-0">
       <button class="btn w-100 bg-white shadow rounded-pill">
@@ -54,5 +56,9 @@ export default class AppCardComponent extends Vue {}
 .chip {
   padding: 5px 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.card-description {
+  height: 50px;
+  overflow: hidden;
 }
 </style>
