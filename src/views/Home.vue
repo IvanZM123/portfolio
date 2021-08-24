@@ -21,30 +21,28 @@
         </div>
       </section>
 
-      <main class="py-4">
+      <section>
         <div class="row">
-          <div class="col-12 col-xl-8 p-2">
-            <section>
-              <div class="section-header pb-3">
-                <h2>
-                  <strong>Top applications</strong>
-                </h2>
-                <p class="text-muted m-0">Take a look at the top apps.</p>
-              </div>
-
-              <div class="row">
-                <div
-                  class="col-12 col-sm-6 p-3"
-                  v-for="(app, i) in apps"
-                  :key="i"
-                >
-                  <app-card-component v-bind:app="app" />
+          <div class="col-12 col-lg-8 p-3">
+            <container-dynamic-component
+              title="Top Applications"
+              subtitle="Take a look at the top apps"
+            >
+              <slot>
+                <div class="row">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-6 p-3"
+                    v-for="(app, i) in apps"
+                    :key="i"
+                  >
+                    <app-card-component v-bind:app="app" />
+                  </div>
                 </div>
-              </div>
-            </section>
+              </slot>
+            </container-dynamic-component>
           </div>
         </div>
-      </main>
+      </section>
     </div>
   </div>
 </template>
@@ -54,12 +52,14 @@ import { Options, Vue } from "vue-class-component";
 
 import { SectionService, Section } from "@/services/section.service";
 
+import ContainerDynamicComponent from "@/components/ContainerDynamic.vue";
 import CarouselComponent from "@/components/Carousel.vue";
 import ItemCardComponent from "@/components/ItemCard.vue";
 import AppCardComponent from "@/components/AppCard.vue";
 
 @Options({
   components: {
+    ContainerDynamicComponent,
     CarouselComponent,
     ItemCardComponent,
     AppCardComponent,
@@ -96,6 +96,28 @@ export default class Home extends Vue {
         },
         {
           name: "Vue.js",
+          color: "success",
+        },
+      ],
+    },
+    {
+      title: "Vuochat",
+      subtitle: "Instant Messaging",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, nobis! Officia totam itaque delectus.",
+      picture:
+        "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1612023023/App_banners/vuochat_users_q6v2tu.png",
+      technologies: [
+        {
+          name: "Typescript",
+          color: "primary",
+        },
+        {
+          name: "Javascript",
+          color: "warning",
+        },
+        {
+          name: "Node.js",
           color: "success",
         },
       ],
