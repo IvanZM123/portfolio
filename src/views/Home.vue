@@ -33,39 +33,12 @@
               </div>
 
               <div class="row">
-                <div class="col-12 col-lg-6 p-3">
-                  <div
-                    class="card p-2 px-3 bg-darken shadow"
-                    style="border-radius: 20px"
-                  >
-                    <div class="card-header border-0 bg-darken px-0">
-                      <div class="card-banner">
-                        <img
-                          src="https://res.cloudinary.com/dlkfpx8lb/image/upload/v1609967502/App_banners/kampweather_vnsrti.png"
-                          alt="image banner"
-                        />
-                      </div>
-                    </div>
-                    <div class="card-body px-0">
-                      <div class="d-flex flex-wrap w-100 mb-3">
-                        <small class="text-primary mx-1">
-                          <strong>Typescript</strong>
-                        </small>
-                        <small class="text-success mx-1">
-                          <strong>Vue.js</strong>
-                        </small>
-                        <small class="text-warning mx-1">
-                          <strong>Firebase</strong>
-                        </small>
-                      </div>
-                      <p class="mb-2"><strong>Kampweather</strong></p>
-                      <small class="text-"
-                        >Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Laborum, nobis! Officia totam itaque
-                        delectus.</small
-                      >
-                    </div>
-                  </div>
+                <div
+                  class="col-12 col-sm-6 p-3"
+                  v-for="(app, i) in apps"
+                  :key="i"
+                >
+                  <app-card-component v-bind:app="app" />
                 </div>
               </div>
             </section>
@@ -83,11 +56,13 @@ import { SectionService, Section } from "@/services/section.service";
 
 import CarouselComponent from "@/components/Carousel.vue";
 import ItemCardComponent from "@/components/ItemCard.vue";
+import AppCardComponent from "@/components/AppCard.vue";
 
 @Options({
   components: {
     CarouselComponent,
     ItemCardComponent,
+    AppCardComponent,
   },
 })
 export default class Home extends Vue {
@@ -102,6 +77,30 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
+  apps = [
+    {
+      title: "Kampweather",
+      subtitle: "Weather App",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, nobis! Officia totam itaque delectus.",
+      picture:
+        "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1609967502/App_banners/kampweather_vnsrti.png",
+      technologies: [
+        {
+          name: "Typescript",
+          color: "primary",
+        },
+        {
+          name: "Javascript",
+          color: "warning",
+        },
+        {
+          name: "Vue.js",
+          color: "success",
+        },
+      ],
+    },
+  ];
   sections: Array<Section> = [];
 
   async created(): Promise<void> {
@@ -109,21 +108,3 @@ export default class Home extends Vue {
   }
 }
 </script>
-
-<style scoped>
-.card-banner {
-  border-radius: 20px;
-  width: 100%;
-  height: 170px;
-  overflow: hidden;
-}
-.card-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.chip {
-  padding: 5px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-</style>
