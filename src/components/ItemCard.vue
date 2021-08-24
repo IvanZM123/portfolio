@@ -44,24 +44,6 @@ export default class ItemCardComponent extends Vue {}
 .card {
   border-radius: 20px;
 }
-.bg-danger-transparent {
-  background-color: rgba(234, 32, 39, 0.4);
-}
-.bg-yellow-transparent {
-  background-color: rgba(243, 156, 18, 0.4);
-}
-.bg-primary-transparent {
-  background-color: rgba(13, 110, 253, 0.4);
-}
-.bg-brown-transparent {
-  background-color: rgba(82, 56, 56, 0.4);
-}
-.bg-brown {
-  background-color: #523838;
-}
-.bg-yellow {
-  background-color: rgba(243, 156, 18, 1);
-}
 .card-footer {
   background: none;
 }

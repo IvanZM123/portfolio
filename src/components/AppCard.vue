@@ -15,7 +15,7 @@
           <strong>{{ item.name }}</strong>
         </small>
       </div>
-      <p class="mb-2">
+      <p class="mb-2 text-purple">
         <strong>{{ app.title }} - {{ app.subtitle }}</strong>
       </p>
       <div class="card-description">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="card-footer bg-darken border-0">
-      <button class="btn w-100 bg-white shadow rounded-pill">
+      <button class="btn w-100 bg-purple shadow rounded-pill">
         See more...
       </button>
     </div>

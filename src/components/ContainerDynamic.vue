@@ -4,7 +4,7 @@
       <h2>
         <strong>{{ title }}</strong>
       </h2>
-      <p class="text-muted">{{ subtitle }}</p>
+      <p class="text-purple">{{ subtitle }}</p>
     </section>
 
     <section class="w-100">
