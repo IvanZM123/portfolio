@@ -4,9 +4,10 @@
 * {
     font-family: "Poppins";
 }
-
 body {
     background-color: #121212;
-    /* background-color: #031f30; */
     color: white;
+}
+i {
+    font-size: 20px;
 }

@@ -57,8 +57,9 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
-import { SectionService, Section } from "@/services/section.service";
-import { AppService, App } from "@/services/app.service";
+import { Section } from "@/services/section.service";
+
+import { apps, App } from "@/mock/apps.mock";
 
 import ContainerDynamicComponent from "@/components/ContainerDynamic.vue";
 import CarouselComponent from "@/components/Carousel.vue";
@@ -74,8 +75,6 @@ import AppCardComponent from "@/components/AppCard.vue";
   },
 })
 export default class Home extends Vue {
-  private sectionService: SectionService = new SectionService();
-  private appService: AppService = new AppService();
   carouselItems: Array<Record<string, string>> = [
     {
       title: "I'm Fullstack Developer",
@@ -86,12 +85,7 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
-  apps: Array<App> = [];
+  apps: Array<App> = apps;
   sections: Array<Section> = [];
-
-  async created(): Promise<void> {
-    this.sections = await this.sectionService.list();
-    this.apps = await this.appService.list();
-  }
 }
 </script>

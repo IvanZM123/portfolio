@@ -22,11 +22,6 @@
         <small>{{ app.description }}</small>
       </div>
     </div>
-    <div class="card-footer bg-darken border-0">
-      <button class="btn w-100 bg-purple shadow rounded-pill">
-        See more...
-      </button>
-    </div>
   </div>
 </template>
 
@@ -42,6 +37,13 @@ export default class AppCardComponent extends Vue {}
 </script>
 
 <style scoped>
+.card {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.03);
+}
 .card-banner {
   border-radius: 20px;
   width: 100%;
