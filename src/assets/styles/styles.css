@@ -5,9 +5,12 @@
     font-family: "Poppins";
 }
 body {
-    background-color: #121212;
-    color: white;
+  background-color: #121212;
+  color: white;
 }
 i {
-    font-size: 20px;
+  font-size: 20px;
+}
+.spacer {
+  flex: 1 1 auto;
 }

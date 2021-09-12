@@ -4,6 +4,7 @@ export interface Article {
   subtitle: string;
   picture: string;
   url: string;
+  tags: Array<string>;
 }
 
 export const articles: Array<Article> = [
@@ -15,6 +16,7 @@ export const articles: Array<Article> = [
     picture:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--Z2jDyXvw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3tavsbki7n7etzlgjn7h.png",
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feather-js-and-node-js-4had",
+    tags: ["Feathers.js", "Node.js", "Typescript"],
   },
   {
     id: 2,
@@ -24,5 +26,6 @@ export const articles: Array<Article> = [
     picture:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--RSMvwHxC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s1x6u5xuigl873g8wp9z.png",
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feathers-js-frontend-using-vue-js-4n9c",
+    tags: ["Feathers.js", "Node.js", "Typescript", "Vue.js"],
   },
 ];
