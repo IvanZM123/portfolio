@@ -4,7 +4,7 @@
       <section class="py-3">
         <div class="row">
           <div class="col-12">
-            <carousel-component v-bind:items="carouselItems" />
+            <carousel v-bind:items="carouselItems" />
           </div>
         </div>
       </section>
@@ -16,7 +16,7 @@
             v-for="(item, i) in sections"
             :key="i"
           >
-            <item-card-component v-bind:item="item" />
+            <item-card v-bind:item="item" />
           </div>
         </div>
       </section>
@@ -24,7 +24,7 @@
       <section>
         <div class="row">
           <div class="col-12 p-3">
-            <container-dynamic-component
+            <container-dynamic
               title="Top Applications"
               subtitle="Take a look at the top apps"
             >
@@ -35,25 +35,33 @@
                     v-for="(app, i) in apps"
                     :key="i"
                   >
-                    <app-card-component v-bind:app="app" />
+                    <app-card v-bind:app="app" />
                   </div>
                 </div>
               </slot>
-            </container-dynamic-component>
+            </container-dynamic>
           </div>
           <div class="col-12 col-xl-8 p-3">
-            <container-dynamic-component
+            <container-dynamic
               title="Some Articles"
               subtitle="These are some of my articles."
             >
-            </container-dynamic-component>
+              <ul class="list-group">
+                <article-card
+                  class="my-2"
+                  v-for="(item, i) in articles"
+                  :key="i"
+                  :article="item"
+                />
+              </ul>
+            </container-dynamic>
           </div>
           <div class="col-12 col-xl-4 p-3">
-            <container-dynamic-component
+            <container-dynamic
               title="Some Packages"
-              subtitle="These are some of my packages."
+              subtitle="Packages developed for the community."
             >
-            </container-dynamic-component>
+            </container-dynamic>
           </div>
         </div>
       </section>
@@ -69,17 +77,19 @@ import { Section } from "@/services/section.service";
 import { apps, App } from "@/mock/apps.mock";
 import { articles, Article } from "@/mock/articles.mock";
 
-import ContainerDynamicComponent from "@/components/ContainerDynamic.vue";
-import CarouselComponent from "@/components/Carousel.vue";
-import ItemCardComponent from "@/components/ItemCard.vue";
-import AppCardComponent from "@/components/AppCard.vue";
+import ContainerDynamic from "@/components/ContainerDynamic.vue";
+import ArticleCard from "@/components/ArticleCard.vue";
+import Carousel from "@/components/Carousel.vue";
+import ItemCard from "@/components/ItemCard.vue";
+import AppCard from "@/components/AppCard.vue";
 
 @Options({
   components: {
-    ContainerDynamicComponent,
-    CarouselComponent,
-    ItemCardComponent,
-    AppCardComponent,
+    ContainerDynamic,
+    Carousel,
+    ItemCard,
+    AppCard,
+    ArticleCard,
   },
 })
 export default class Home extends Vue {
