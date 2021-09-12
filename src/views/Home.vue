@@ -67,6 +67,7 @@ import { Options, Vue } from "vue-class-component";
 import { Section } from "@/services/section.service";
 
 import { apps, App } from "@/mock/apps.mock";
+import { articles, Article } from "@/mock/articles.mock";
 
 import ContainerDynamicComponent from "@/components/ContainerDynamic.vue";
 import CarouselComponent from "@/components/Carousel.vue";
@@ -93,6 +94,7 @@ export default class Home extends Vue {
     },
   ];
   apps: Array<App> = apps;
+  articles: Array<Article> = articles;
   sections: Array<Section> = [];
 }
 </script>
