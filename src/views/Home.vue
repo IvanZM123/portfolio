@@ -23,7 +23,7 @@
 
       <section>
         <div class="row">
-          <div class="col-12 col-xl-8 p-3">
+          <div class="col-12 p-3">
             <container-dynamic-component
               title="Top Applications"
               subtitle="Take a look at the top apps"
@@ -31,7 +31,7 @@
               <slot>
                 <div class="row">
                   <div
-                    class="col-12 col-sm-6 col-lg-4 col-xl-6 p-3"
+                    class="col-12 col-sm-6 col-lg-4 p-3"
                     v-for="(app, i) in apps"
                     :key="i"
                   >
@@ -41,10 +41,17 @@
               </slot>
             </container-dynamic-component>
           </div>
-          <div class="col-12 col-xl-4 p-3">
+          <div class="col-12 col-xl-8 p-3">
             <container-dynamic-component
               title="Some Articles"
               subtitle="These are some of my articles."
+            >
+            </container-dynamic-component>
+          </div>
+          <div class="col-12 col-xl-4 p-3">
+            <container-dynamic-component
+              title="Some Packages"
+              subtitle="These are some of my packages."
             >
             </container-dynamic-component>
           </div>

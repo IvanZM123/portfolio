@@ -45,4 +45,19 @@ export const apps: Array<App> = [
     technologiesIds: [],
     features: [],
   },
+  {
+    id: 3,
+    title: "Kampweather",
+    subtitle: "Weather app",
+    description:
+      "Kampweather is a weather app. It is developed in Vue and the resources obtained come from OpenWeather. Also use the Geolocation to obtain the current climate of my location.",
+    picture:
+      "https://camo.githubusercontent.com/4b70fc4d59bc3a2a18ba54f8bba25e08cbc332801ee116916f93112205123cbe/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f646c6b667078386c622f696d6167652f75706c6f61642f76313630393936373530322f4170705f62616e6e6572732f6b616d70776561746865725f766e737274692e706e67",
+    images: [],
+    videos: [],
+    githubUrl: "https://github.com/IvanZM123/kampweather",
+    demoUrl: "https://kampweather.web.app",
+    technologiesIds: [],
+    features: [],
+  },
 ];
