@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link to="/">
         <a class="navbar-brand">
-          <strong> <span class="text-purple">Port</span>folio </strong>
+          <strong> <span class="text-purple">{Port</span>folio}</strong>
         </a>
       </router-link>
       <button

@@ -2,6 +2,15 @@
 .bg-danger-transparent {
     background-color: rgba(234, 32, 39, 0.4);
 }
+.bg-red-transparent {
+    background-color: rgba(234, 32, 39, .4);
+}
+.bg-green-aqua-transparent {
+    background-color: rgba(63, 185, 132, .4);
+}
+.bg-green-light-transparent {
+    background-color: rgba(131, 204, 40, .4);
+}
 .bg-yellow-transparent {
     background-color: rgba(243, 156, 18, 0.4);
 }

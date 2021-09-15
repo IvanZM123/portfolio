@@ -10,6 +10,18 @@
       </section>
 
       <section class="py-4">
+        <div class="row">
+          <div
+            v-for="(item, i) in technologies"
+            :key="i"
+            class="col-12 col-sm-6 col-lg-4 p-3"
+          >
+            <technology-card :technology="item" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-4">
         <div class="row justify-content-center">
           <div
             class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
@@ -76,8 +88,10 @@ import { Section } from "@/services/section.service";
 
 import { apps, App } from "@/mock/apps.mock";
 import { articles, Article } from "@/mock/articles.mock";
+import { technologies, Technology } from "@/mock/technologies.mock";
 
 import ContainerDynamic from "@/components/ContainerDynamic.vue";
+import TechnologyCard from "@/components/TechnologyCard.vue";
 import ArticleCard from "@/components/ArticleCard.vue";
 import Carousel from "@/components/Carousel.vue";
 import ItemCard from "@/components/ItemCard.vue";
@@ -90,6 +104,7 @@ import AppCard from "@/components/AppCard.vue";
     ItemCard,
     AppCard,
     ArticleCard,
+    TechnologyCard,
   },
 })
 export default class Home extends Vue {
@@ -105,6 +120,14 @@ export default class Home extends Vue {
   ];
   apps: Array<App> = apps;
   articles: Array<Article> = articles;
+  technologies: Array<Technology> = technologies;
   sections: Array<Section> = [];
 }
 </script>
+
+<style scoped>
+img {
+  width: 50px;
+  height: 50px;
+}
+</style>

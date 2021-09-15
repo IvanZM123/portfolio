@@ -25,7 +25,7 @@
       <div class="col-12 col-sm-3 col-md-2 mt-3">
         <a
           :href="article.url"
-          target="blank"
+          target="_blank"
           class="btn bg-purple w-100 text-white border-0 py-1 px-2"
           >See</a
         >
