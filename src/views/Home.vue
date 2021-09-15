@@ -10,15 +10,20 @@
       </section>
 
       <section class="py-4">
-        <div class="row">
-          <div
-            v-for="(item, i) in technologies"
-            :key="i"
-            class="col-12 col-sm-6 col-lg-4 p-3"
-          >
-            <technology-card :technology="item" />
+        <container-dynamic
+          title="Technologies"
+          subtitle="Some of the technologies to be used."
+        >
+          <div class="row">
+            <div
+              v-for="(item, i) in technologies"
+              :key="i"
+              class="col-12 col-sm-6 col-lg-4 p-3"
+            >
+              <technology-card :technology="item" />
+            </div>
           </div>
-        </div>
+        </container-dynamic>
       </section>
 
       <section class="py-4">
@@ -124,10 +129,3 @@ export default class Home extends Vue {
   sections: Array<Section> = [];
 }
 </script>
-
-<style scoped>
-img {
-  width: 50px;
-  height: 50px;
-}
-</style>

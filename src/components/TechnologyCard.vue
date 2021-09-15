@@ -31,3 +31,11 @@ import { Options, Vue } from "vue-class-component";
 })
 export default class TechnologyCard extends Vue {}
 </script>
+
+<style scoped>
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+</style>
