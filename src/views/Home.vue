@@ -58,28 +58,29 @@
               </slot>
             </container-dynamic>
           </div>
-          <div class="col-12 col-xl-8 p-3">
+          <div class="col-12 p-3">
             <container-dynamic
               title="Some Articles"
               subtitle="These are some of my articles."
             >
-              <ul class="list-group">
-                <article-card
-                  class="my-2"
+              <div class="row">
+                <div
                   v-for="(item, i) in articles"
                   :key="i"
-                  :article="item"
-                />
-              </ul>
+                  class="col-12 col-md-6 col-lg-4 p-3"
+                >
+                  <article-card :article="item" />
+                </div>
+              </div>
             </container-dynamic>
           </div>
-          <div class="col-12 col-xl-4 p-3">
+          <!-- <div class="col-12 col-xl-4 p-3">
             <container-dynamic
               title="Some Packages"
               subtitle="Packages developed for the community."
             >
             </container-dynamic>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>

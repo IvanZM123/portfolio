@@ -1,37 +1,33 @@
 <template>
-  <li class="list-group-item text-white border-0">
-    <div class="row">
-      <div class="col-12 col-sm-2 text-center">
-        <div class="avatar mx-auto d-block">
-          <img :src="article.picture" class="w-100 h-100" alt="Banner" />
+  <div class="card border-0">
+    <div class="card-body p-0">
+      <div class="card-body-img">
+        <img :src="article.picture" :alt="`Picture ${article.title}`" />
+      </div>
+      <div class="card-body-content p-3">
+        <div class="d-flex align-items-center w-100">
+          <p class="d-flex align-items-center m-0">
+            <i class="bx bx-calendar"></i>
+            <span class="ms-2">{{ article.date }}</span>
+          </p>
+          <div class="spacer"></div>
         </div>
-      </div>
-      <div class="col-12 col-sm-10 mt-3 mt-sm-0">
-        <h6>
-          <strong>{{ article.title }}</strong>
-        </h6>
-        <p class="text-muted m-0">{{ article.subtitle }}</p>
-      </div>
-      <div class="col-12 col-sm-9 col-md-10 mt-3">
-        <div class="tags w-100">
-          <small
-            v-for="tag in article.tags"
-            :key="tag"
-            class="chip bg-darken m-1"
-            >{{ tag }}</small
-          >
+        <div class="card-body-content-main py-2 w-100">
+          <h5>
+            <strong>{{ article.title }}</strong>
+          </h5>
+          <div>
+            <small v-for="tag in article.tags" :key="tag" class="m-1">
+              <strong>#{{ tag }}</strong>
+            </small>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-3 col-md-2 mt-3">
-        <a
-          :href="article.url"
-          target="_blank"
-          class="btn bg-purple w-100 text-white border-0 py-1 px-2"
-          >See</a
-        >
+        <div class="card-body-content-text w-100">
+          <p class="m-0">{{ article.subtitle }}</p>
+        </div>
       </div>
     </div>
-  </li>
+  </div>
 </template>
 
 <script lang="ts">
@@ -46,22 +42,35 @@ export default class ArticleCard extends Vue {}
 </script>
 
 <style scoped>
-.list-group-item {
+.card {
   background-color: transparent;
 }
-.tags {
-  display: flex;
-  flex-wrap: wrap !important;
-  flex-direction: row !important;
-}
-.avatar {
-  height: 70px;
-  width: 70px;
+.card-body {
+  position: relative;
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 10px;
 }
-.avatar img {
+.card-body-img {
+  width: 100%;
+  height: 230px;
+}
+.card-body-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+.card-body-content {
+  position: absolute;
+  content: "";
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .chip {
   padding: 5px 10px;
