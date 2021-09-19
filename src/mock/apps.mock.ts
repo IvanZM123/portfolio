@@ -11,6 +11,7 @@ export interface App {
   technologiesIds: Array<number>;
   technologies?: Array<Record<string, string>>;
   features: Array<Record<string, string>>;
+  color: string;
   [key: string]: any;
 }
 
@@ -29,6 +30,7 @@ export const apps: Array<App> = [
     demoUrl: "https://vuochat.herokuapp.com",
     technologiesIds: [],
     features: [],
+    color: "ocean",
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ export const apps: Array<App> = [
     demoUrl: "https://vuejscommerce.herokuapp.com",
     technologiesIds: [],
     features: [],
+    color: "darken",
   },
   {
     id: 3,
@@ -59,5 +62,6 @@ export const apps: Array<App> = [
     demoUrl: "https://kampweather.web.app",
     technologiesIds: [],
     features: [],
+    color: "brown",
   },
 ];
