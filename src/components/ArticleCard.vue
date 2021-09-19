@@ -11,6 +11,13 @@
             <span class="ms-2">{{ article.date }}</span>
           </p>
           <div class="spacer"></div>
+          <a
+            :href="article.url"
+            target="_blank"
+            class="btn border-0 m-0 p-0 text-white"
+          >
+            <i class="bx bx-window-open"></i>
+          </a>
         </div>
         <div class="card-body-content-main py-2 w-100">
           <h5>

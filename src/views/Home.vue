@@ -74,13 +74,6 @@
               </div>
             </container-dynamic>
           </div>
-          <!-- <div class="col-12 col-xl-4 p-3">
-            <container-dynamic
-              title="Some Packages"
-              subtitle="Packages developed for the community."
-            >
-            </container-dynamic>
-          </div> -->
         </div>
       </section>
     </div>
@@ -124,9 +117,18 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
-  apps: Array<App> = apps;
-  articles: Array<Article> = articles;
-  technologies: Array<Technology> = technologies;
   sections: Array<Section> = [];
+
+  get apps(): App[] {
+    return apps.slice(0, 3);
+  }
+
+  get articles(): Article[] {
+    return articles.slice(0, 3);
+  }
+
+  get technologies(): Technology[] {
+    return technologies.slice(0, 6);
+  }
 }
 </script>

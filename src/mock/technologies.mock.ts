@@ -13,8 +13,7 @@ export const technologies: Technology[] = [
     description:
       "It is a framework for modern web application design of a single page application.",
     color: "red",
-    picture:
-      "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_angular_icon_130754.png",
+    picture: "https://cdn.worldvectorlogo.com/logos/angular-icon.svg",
   },
   {
     id: 2,

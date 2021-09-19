@@ -33,6 +33,17 @@ export const articles: Array<Article> = [
   },
   {
     id: 3,
+    title: "Say goodbye Trycatch Hell.",
+    subtitle:
+      "Hi everyone! It is possible that it is here for the post title, and I daresay you have had problems handling",
+    picture:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--ZKqs3ZOy--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nd5l81zrjkt4g04kwe1y.png",
+    url: "https://dev.to/ivanz123/say-goodbye-trycatch-hell-336o",
+    tags: ["Programming", "Productive", "Typescript"],
+    date: "18 Sep 2021",
+  },
+  {
+    id: 4,
     title: "How to setup email verification in Feathers.js - Angular",
     subtitle:
       "This is the second part of How to setup email verification in Feathers.js",
