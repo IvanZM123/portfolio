@@ -1,28 +1,33 @@
 <template>
-  <div class="card p-2 px-3 bg-darken shadow" style="border-radius: 20px">
-    <div class="card-header border-0 bg-darken px-0">
-      <div class="card-banner">
-        <img :src="app.picture" :alt="app.title" />
+  <router-link
+    :to="{ name: 'Apps-Details', params: { appId: app.slug } }"
+    class="text-decoration-none"
+  >
+    <div class="card p-2 px-3 bg-darken shadow" style="border-radius: 20px">
+      <div class="card-header border-0 bg-darken px-0">
+        <div class="card-banner">
+          <img :src="app.picture" :alt="app.title" />
+        </div>
+      </div>
+      <div class="card-body px-0">
+        <div class="d-flex flex-wrap w-100 mb-3">
+          <small
+            :class="`text-${item.color} mx-1`"
+            v-for="(item, i) in app.technologies || 0"
+            :key="i"
+          >
+            <strong>{{ item.name }}</strong>
+          </small>
+        </div>
+        <p class="mb-2 text-purple">
+          <strong>{{ app.title }} - {{ app.subtitle }}</strong>
+        </p>
+        <div class="card-description">
+          <small>{{ app.description }}</small>
+        </div>
       </div>
     </div>
-    <div class="card-body px-0">
-      <div class="d-flex flex-wrap w-100 mb-3">
-        <small
-          :class="`text-${item.color} mx-1`"
-          v-for="(item, i) in app.technologies || 0"
-          :key="i"
-        >
-          <strong>{{ item.name }}</strong>
-        </small>
-      </div>
-      <p class="mb-2 text-purple">
-        <strong>{{ app.title }} - {{ app.subtitle }}</strong>
-      </p>
-      <div class="card-description">
-        <small>{{ app.description }}</small>
-      </div>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -33,7 +38,7 @@ import { Options, Vue } from "vue-class-component";
     app: Object,
   },
 })
-export default class AppCardComponent extends Vue {}
+export default class AppCard extends Vue {}
 </script>
 
 <style scoped>

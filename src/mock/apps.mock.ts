@@ -1,3 +1,5 @@
+import { Technology } from "./technologies.mock";
+
 export interface App {
   id: number;
   title: string;
@@ -9,10 +11,11 @@ export interface App {
   images: Array<string>;
   videos: Array<string>;
   technologiesIds: Array<number>;
-  technologies?: Array<Record<string, string>>;
+  technologies?: Array<Technology>;
   features: Array<Record<string, string>>;
   color: string;
-  [key: string]: any;
+  slug: string;
+  [key: string]: unknown;
 }
 
 export const apps: Array<App> = [
@@ -28,9 +31,10 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/vuochat",
     demoUrl: "https://vuochat.herokuapp.com",
-    technologiesIds: [],
+    technologiesIds: [3, 4],
     features: [],
     color: "ocean",
+    slug: "vuochat",
   },
   {
     id: 2,
@@ -44,9 +48,10 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/ecommerce",
     demoUrl: "https://vuejscommerce.herokuapp.com",
-    technologiesIds: [],
+    technologiesIds: [2, 3, 4],
     features: [],
     color: "darken",
+    slug: "vuocommerce",
   },
   {
     id: 3,
@@ -60,8 +65,9 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/kampweather",
     demoUrl: "https://kampweather.web.app",
-    technologiesIds: [],
+    technologiesIds: [2, 3, 4],
     features: [],
     color: "brown",
+    slug: "kampweather",
   },
 ];
