@@ -112,7 +112,7 @@ export default class Home extends Vue {
       title: "I'm Fullstack Developer",
       subtitle:
         "I can handle Backend, Frontend and interface design technologies. If solutions are what you want, that's my middle name.",
-      image:
+      picture:
         "https://www.edureka.co/blog/wp-content/uploads/2018/10/How-to-become-a-Full-Stack-Web-Developer--451x300.png",
       color: "purple",
     },

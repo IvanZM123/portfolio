@@ -6,6 +6,7 @@ export interface Article {
   url: string;
   date: string;
   tags: Array<string>;
+  color: string;
 }
 
 export const articles: Array<Article> = [
@@ -19,6 +20,7 @@ export const articles: Array<Article> = [
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feather-js-and-node-js-4had",
     tags: ["Feathers.js", "Node.js", "Typescript"],
     date: "9 Sep 2021",
+    color: "blue",
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ export const articles: Array<Article> = [
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feathers-js-frontend-using-vue-js-4n9c",
     tags: ["Feathers.js", "Node.js", "Typescript", "Vue.js"],
     date: "2 Sep 2021",
+    color: "green-aqua",
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ export const articles: Array<Article> = [
     url: "https://dev.to/ivanz123/say-goodbye-trycatch-hell-336o",
     tags: ["Programming", "Productive", "Typescript"],
     date: "18 Sep 2021",
+    color: "blue-darken",
   },
   {
     id: 4,
@@ -52,5 +56,6 @@ export const articles: Array<Article> = [
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feathers-js-frontend-using-vue-js-4n9c",
     tags: ["Angular", "Feathers.js", "Node.js", "Typescript"],
     date: "9 Sep 2021",
+    color: "danger",
   },
 ];

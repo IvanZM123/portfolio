@@ -10,7 +10,10 @@
         :key="i"
         :class="`carousel-item ${!i ? 'active' : ''}`"
       >
-        <div class="card border-0" style="overflow: hidden">
+        <div
+          :class="`card bg-${item.color}-transparent border-0`"
+          style="overflow: hidden"
+        >
           <div class="row">
             <div class="col-12 col-md-6 col-lg-6 p-5">
               <div class="circle" :class="`bg-${item.color}`"></div>
@@ -24,7 +27,7 @@
             </div>
             <div class="section-img col-12 col-md-6 col-lg-6 d-none d-md-block">
               <div :class="`box h-100 bg-${item.color} ms-auto`">
-                <img :src="item.image" :alt="`${item.title} banner`" />
+                <img :src="item.picture" :alt="`${item.title} banner`" />
               </div>
             </div>
           </div>
@@ -66,7 +69,7 @@ export default class Carousel extends Vue {}
 <style scoped>
 .card {
   border-radius: 35px;
-  background-color: rgba(140, 82, 255, 0.1);
+  /* background-color: rgba(140, 82, 255, 0.1); */
 }
 
 .card h1 {
@@ -91,7 +94,7 @@ export default class Carousel extends Vue {}
 }
 
 .box {
-  background-color: #8c52ff;
+  /* background-color: #8c52ff; */
   width: 50%;
 }
 
