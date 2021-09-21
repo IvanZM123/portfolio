@@ -1,6 +1,25 @@
 <template>
   <div class="packages">
-    <h1>This is an packages page</h1>
+    <div
+      class="row justify-content-center align-items-center"
+      style="min-height: 85vh"
+    >
+      <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+        <div class="card border-0 text-center">
+          <picture>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1378/1378644.png"
+              alt="Picture"
+            />
+          </picture>
+          <div class="card-body">
+            <h1>
+              <strong>Coming Soooon! 🔥</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,3 +29,13 @@ import { Options, Vue } from "vue-class-component";
 @Options({})
 export default class PackagesPage extends Vue {}
 </script>
+
+<style scoped>
+.card {
+  background-color: transparent;
+}
+picture img {
+  width: 300px;
+  height: 300px;
+}
+</style>
