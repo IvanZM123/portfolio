@@ -72,22 +72,7 @@
               :key="i"
               class="col-12 col-sm-6 col-xl-3 p-3"
             >
-              <div
-                class="card border-0 bg-darken shadow"
-                style="border-radius: 20px"
-              >
-                <div class="card-header d-block border-0 bg-darken mt-3">
-                  <button
-                    :class="`d-flex btn border-0 bg-${item.color}-transparent avatar-icon text-white`"
-                  >
-                    <i :class="`bx bx-${item.icon}`"></i>
-                  </button>
-                </div>
-                <div class="card-body">
-                  <h5>{{ item.title }}</h5>
-                  <p class="text-muted m-0">{{ item.description }}</p>
-                </div>
-              </div>
+              <feature-card :feature="item" />
             </div>
           </div>
         </div>
@@ -101,7 +86,13 @@ import { Options, Vue } from "vue-class-component";
 
 import { apps, App } from "@/mock/apps.mock";
 
-@Options({})
+import FeatureCard from "@/components/FeatureCard.vue";
+
+@Options({
+  components: {
+    FeatureCard,
+  },
+})
 export default class AppDetails extends Vue {
   created(): void {
     !this.app ? this.$router.replace({ name: "Apps" }) : null;
@@ -120,12 +111,5 @@ export default class AppDetails extends Vue {
 <style scoped>
 img {
   object-fit: cover;
-}
-.avatar-icon {
-  padding: 10px;
-  border-radius: 10px;
-}
-.avatar-icon i {
-  font-size: 40px;
 }
 </style>
