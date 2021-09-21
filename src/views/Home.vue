@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container-fluid">
-      <section class="py-3">
+      <section v-animation class="py-3">
         <div class="row">
           <div class="col-12">
             <carousel v-bind:items="carouselItems" />

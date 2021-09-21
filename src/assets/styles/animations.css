@@ -1,0 +1,9 @@
+.fade-and-displacement-right-before-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+.fade-and-displacement-right-enter {
+  opacity: 1;
+  transform: translateX(0px);
+}

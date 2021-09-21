@@ -1,5 +1,6 @@
 @import url("bootstrap.min.css");
 @import url("colors.css");
+@import url("animations.css");
 
 * {
     font-family: "Poppins";

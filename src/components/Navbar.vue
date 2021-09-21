@@ -1,11 +1,17 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark py-3 border-0 bg-darken">
     <div class="container-fluid">
-      <router-link to="/">
-        <a class="navbar-brand">
-          <strong> <span class="text-purple">{Port</span>folio}</strong>
-        </a>
-      </router-link>
+      <div
+        v-animation
+        data-effect="fade-and-displacement-right"
+        data-delay=".1"
+      >
+        <router-link to="/">
+          <a class="navbar-brand">
+            <strong> <span class="text-purple">{Port</span>folio}</strong>
+          </a>
+        </router-link>
+      </div>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,7 +25,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item" v-for="(item, i) in items" :key="i">
+          <li
+            class="nav-item"
+            v-for="(item, i) in items"
+            :key="i"
+            v-animation
+            data-effect="fade-and-displacement-right"
+            :data-delay="i * 0.3"
+          >
             <router-link
               :to="{ name: item.text }"
               active-class="active"

@@ -5,4 +5,10 @@ import store from "./store";
 
 import "@/assets/styles/styles.css";
 
-createApp(App).use(store).use(router).mount("#app");
+import { animation } from "@/directives/animation.directive";
+
+const VueApp = createApp(App);
+
+VueApp.directive("animation", animation);
+
+VueApp.use(store).use(router).mount("#app");
