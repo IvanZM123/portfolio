@@ -1,4 +1,12 @@
-import { Technology } from "./technologies.mock";
+import { filterEntities } from "@/utils/helpers";
+import { technologies, Technology } from "./technologies.mock";
+
+export interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}
 
 export interface App {
   id: number;
@@ -10,9 +18,8 @@ export interface App {
   demoUrl: string;
   images: Array<string>;
   videos: Array<string>;
-  technologiesIds: Array<number>;
-  technologies?: Array<Technology>;
-  features: Array<Record<string, string>>;
+  technologies: Array<Technology>;
+  features: Feature[];
   color: string;
   slug: string;
   [key: string]: unknown;
@@ -24,15 +31,40 @@ export const apps: Array<App> = [
     title: "Vuochat",
     subtitle: "Instant Messaging",
     description:
-      "Vuochat is an instant messaging web application. It is developed in Node.js and Typescript. It incorporates authentication through social networks using Passport.js, and real-time communication is possible thanks to Socket.io, conversations are stored in MongoDB. It also uses PWA as the installation of the Application and Push notifications. If you want to know how it works, click here: Vuochat or on the image.",
+      "Vuochat is an instant messaging web application. It is developed in Node.js and Typescript. It incorporates authentication through social networks using Passport.js, and real-time communication is possible thanks to Socket.io",
     picture:
       "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1612023023/App_banners/vuochat_users_q6v2tu.png",
     images: [],
     videos: [],
     githubUrl: "https://github.com/IvanZM123/vuochat",
     demoUrl: "https://vuochat.herokuapp.com",
-    technologiesIds: [3, 4],
-    features: [],
+    features: [
+      {
+        title: "Real-Time",
+        description: "More connected than ever, allows instant changes.",
+        icon: "stopwatch",
+        color: "yellow",
+      },
+      {
+        title: "Progresive Web Apps",
+        description: "Show notifications, offline use and more...",
+        icon: "trending-up",
+        color: "primary",
+      },
+      {
+        title: "Authentication OAuth",
+        description: "Authentication through social networks and natively.",
+        icon: "check-shield",
+        color: "green-light",
+      },
+      {
+        title: "Back-Up",
+        description: "Provide backup of all your conversations.",
+        icon: "memory-card",
+        color: "brown",
+      },
+    ],
+    technologies: filterEntities(technologies, [3, 4]),
     color: "ocean",
     slug: "vuochat",
   },
@@ -48,8 +80,27 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/ecommerce",
     demoUrl: "https://vuejscommerce.herokuapp.com",
-    technologiesIds: [2, 3, 4],
-    features: [],
+    technologies: filterEntities(technologies, [2, 3, 4]),
+    features: [
+      {
+        title: "Real-Time",
+        description: "More connected than ever, allows instant changes.",
+        icon: "stopwatch",
+        color: "yellow",
+      },
+      {
+        title: "Authentication",
+        description: "User authentication is done through JWT.",
+        icon: "check-shield",
+        color: "green-light",
+      },
+      {
+        title: "Management Roles",
+        description: "Role management is allowed, so you have full control.",
+        icon: "group",
+        color: "danger",
+      },
+    ],
     color: "darken",
     slug: "vuocommerce",
   },
@@ -65,8 +116,27 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/kampweather",
     demoUrl: "https://kampweather.web.app",
-    technologiesIds: [2, 3, 4],
-    features: [],
+    technologies: filterEntities(technologies, [2, 3, 4]),
+    features: [
+      {
+        title: "Geolocation",
+        description: "Get your location for a more detailed forecast.",
+        icon: "world",
+        color: "green-aqua",
+      },
+      {
+        title: "Weekly forecats",
+        description: "View the forecast up to 7 days in advance.",
+        icon: "cloud-light-rain",
+        color: "primary",
+      },
+      {
+        title: "Single Page App",
+        description: "Use it as if it were installed on your device.",
+        icon: "note",
+        color: "purple",
+      },
+    ],
     color: "brown",
     slug: "kampweather",
   },
