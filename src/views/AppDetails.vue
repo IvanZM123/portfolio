@@ -7,6 +7,8 @@
             <div
               class="card border-0 bg-darken shadow"
               style="border-radius: 20px; overflow: hidden"
+              v-animation
+              data-effect="displacement-bottom"
             >
               <img
                 :src="app.picture"
@@ -16,12 +18,30 @@
             </div>
           </div>
           <div class="col-12 col-sm-10 col-md-8 col-lg-6 p-3">
-            <h1>
+            <h1 v-animation data-effect="fade-and-displacement-right">
               <strong>{{ app.title }}</strong>
             </h1>
-            <h5 class="text-muted mb-3">{{ app.subtitle }}</h5>
-            <p>{{ app.description }}</p>
-            <div class="d-flex align-items-center mt-4">
+            <h5
+              v-animation
+              data-effect="fade-and-displacement-right"
+              data-delay=".2"
+              class="text-muted mb-3"
+            >
+              {{ app.subtitle }}
+            </h5>
+            <p
+              v-animation
+              data-effect="fade-and-displacement-right"
+              data-delay=".4"
+            >
+              {{ app.description }}
+            </p>
+            <div
+              v-animation
+              data-effect="fade-and-displacement-right"
+              data-delay=".6"
+              class="d-flex align-items-center mt-4"
+            >
               <a
                 :href="app.demoUrl"
                 target="_blank"
@@ -69,6 +89,9 @@
           v-for="(item, i) in app.features"
           :key="i"
           class="col-12 col-sm-6 col-xl-3 p-3"
+          v-animation
+          data-effect="displacement-bottom"
+          :data-delay="i * 0.15"
         >
           <feature-card :feature="item" />
         </div>
@@ -90,6 +113,9 @@
                   v-for="(item, i) in app.technologies"
                   :key="i"
                   :item="item"
+                  v-animation
+                  data-effect="fade-and-displacement-right"
+                  :data-delay="i * 0.15"
                 />
               </ul>
             </div>

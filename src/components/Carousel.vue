@@ -15,7 +15,12 @@
           style="overflow: hidden"
         >
           <div class="row">
-            <div class="col-12 col-md-6 col-lg-6 p-5">
+            <div
+              v-animation
+              data-effect="displacement-top"
+              data-delay=".2"
+              class="col-12 col-md-6 col-lg-6 p-5"
+            >
               <div class="circle" :class="`bg-${item.color}`"></div>
               <div class="py-5">
                 <h1>
@@ -25,7 +30,12 @@
               </div>
               <div class="rectangle" :class="`bg-${item.color}`"></div>
             </div>
-            <div class="section-img col-12 col-md-6 col-lg-6 d-none d-md-block">
+            <div
+              v-animation
+              data-effect="displacement-bottom"
+              data-delay=".3"
+              class="section-img col-12 col-md-6 col-lg-6 d-none d-md-block"
+            >
               <div :class="`box h-100 bg-${item.color} ms-auto`">
                 <img :src="item.picture" :alt="`${item.title} banner`" />
               </div>

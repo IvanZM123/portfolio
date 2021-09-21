@@ -7,3 +7,30 @@
   opacity: 1;
   transform: translateX(0px);
 }
+.displacement-top-before-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease-out;
+}
+.displacement-top-enter {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.displacement-bottom-before-enter {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.displacement-bottom-enter {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.scale-before-enter {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.scale-enter {
+  opacity: 1;
+  transform: scale(1);
+}

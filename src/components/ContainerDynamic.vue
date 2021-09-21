@@ -1,10 +1,17 @@
 <template>
   <div>
     <section class="w-100">
-      <h2>
+      <h2 v-animation data-effect="fade-and-displacement-right" data-delay=".1">
         <strong>{{ title }}</strong>
       </h2>
-      <p class="text-purple">{{ subtitle }}</p>
+      <p
+        v-animation
+        data-effect="fade-and-displacement-right"
+        data-delay=".3"
+        class="text-purple"
+      >
+        {{ subtitle }}
+      </p>
     </section>
 
     <section class="w-100">

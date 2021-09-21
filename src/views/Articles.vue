@@ -7,6 +7,9 @@
           v-for="(article, i) in articles"
           :key="i"
           class="col-12 col-sm-10 col-md-6 col-xl-4 p-3"
+          v-animation
+          data-effect="scale"
+          :data-delay="i * 0.2"
         >
           <article-card :article="article" />
         </div>

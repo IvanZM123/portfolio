@@ -19,6 +19,9 @@
               v-for="(item, i) in technologies"
               :key="i"
               class="col-12 col-sm-6 col-lg-4 p-3"
+              v-animation
+              data-effect="scale"
+              :data-delay="i * 0.15"
             >
               <technology-card :technology="item" />
             </div>
@@ -32,6 +35,9 @@
             class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
             v-for="(item, i) in sections"
             :key="i"
+            v-animation
+            data-effect="scale"
+            :data-delay="i * 0.15"
           >
             <item-card v-bind:item="item" />
           </div>
@@ -51,6 +57,9 @@
                     class="col-12 col-sm-6 col-lg-4 p-3"
                     v-for="(app, i) in apps"
                     :key="i"
+                    v-animation
+                    data-effect="scale"
+                    :data-delay="i * 0.2"
                   >
                     <app-card v-bind:app="app" />
                   </div>
@@ -68,6 +77,9 @@
                   v-for="(item, i) in articles"
                   :key="i"
                   class="col-12 col-md-6 col-lg-4 p-3"
+                  v-animation
+                  data-effect="scale"
+                  :data-delay="i * 0.15"
                 >
                   <article-card :article="item" />
                 </div>
