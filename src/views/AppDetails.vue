@@ -64,15 +64,44 @@
       </div>
     </section>
     <section>
+      <div class="row justify-content-center">
+        <div
+          v-for="(item, i) in app.features"
+          :key="i"
+          class="col-12 col-sm-6 col-xl-3 p-3"
+        >
+          <feature-card :feature="item" />
+        </div>
+      </div>
+    </section>
+    <section>
       <div class="row">
-        <div class="col-12 p-3">
-          <div class="row justify-content-center">
-            <div
-              v-for="(item, i) in app.features"
-              :key="i"
-              class="col-12 col-sm-6 col-xl-3 p-3"
-            >
-              <feature-card :feature="item" />
+        <div class="col-12 col-xl-7 p-3">
+          <div class="card border-0 bg-darken shadow radius-20">
+            <div class="card-header border-0 bg-darken radius-20">
+              <div class="d-flex align-items-center text-muted">
+                <i class="bx bx-code-alt"></i>
+                <span class="ms-2">Technologies</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <tech-sticker
+                  v-for="(item, i) in app.technologies"
+                  :key="i"
+                  :item="item"
+                />
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 p-3">
+          <div class="card border-0 bg-darken shadow radius-20">
+            <div class="card-header border-0 bg-darken radius-20">
+              <div class="d-flex align-items-center text-muted">
+                <i class="bx bx-video"></i>
+                <span class="ms-2">Videos</span>
+              </div>
             </div>
           </div>
         </div>
@@ -87,10 +116,12 @@ import { Options, Vue } from "vue-class-component";
 import { apps, App } from "@/mock/apps.mock";
 
 import FeatureCard from "@/components/FeatureCard.vue";
+import TechSticker from "@/components/TechSticker.vue";
 
 @Options({
   components: {
     FeatureCard,
+    TechSticker,
   },
 })
 export default class AppDetails extends Vue {
