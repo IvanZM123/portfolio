@@ -80,7 +80,7 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/ecommerce",
     demoUrl: "https://vuejscommerce.herokuapp.com",
-    technologies: filterEntities(technologies, [2, 3, 4]),
+    technologies: filterEntities(technologies, [2, 3, 4, 11, 12]),
     features: [
       {
         title: "Real-Time",
@@ -138,7 +138,7 @@ export const apps: Array<App> = [
     videos: [],
     githubUrl: "https://github.com/IvanZM123/kampweather",
     demoUrl: "https://kampweather.web.app",
-    technologies: filterEntities(technologies, [2, 3, 4]),
+    technologies: filterEntities(technologies, [2, 4, 13]),
     features: [
       {
         title: "Geolocation",

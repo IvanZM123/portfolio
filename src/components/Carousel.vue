@@ -83,7 +83,7 @@ export default class Carousel extends Vue {}
 }
 
 .card h1 {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
 }
 

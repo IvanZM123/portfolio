@@ -97,4 +97,19 @@ export const technologies: Technology[] = [
     color: "darken",
     picture: "https://cdn.worldvectorlogo.com/logos/socket-io.svg",
   },
+  {
+    id: 12,
+    name: "Vuetify",
+    description: "Is a Vue UI Library with beautifully handcrafted Material Components",
+    color: "ocean",
+    picture: "https://iconape.com/wp-content/png_logo_vector/vuetify.png",
+  },
+  {
+    id: 13,
+    name: "OpenWeather",
+    description: "A scientific yet simple approach to weather forecast.",
+    color: "yellow",
+    picture:
+      "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/logo_60x60.png"
+  },
 ];

@@ -1,21 +1,25 @@
 <template>
   <div class="app">
-    <navbar-component />
+    <navbar />
 
     <main class="container-fluid">
       <router-view />
     </main>
+
+    <footer-component />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
-import NavbarComponent from "@/components/Navbar.vue";
+import Navbar from "@/components/Navbar.vue";
+import FooterComponent from "@/components/Footer.vue";
 
 @Options({
   components: {
-    NavbarComponent,
+    Navbar,
+    FooterComponent,
   },
 })
 export default class App extends Vue {}
