@@ -5,7 +5,10 @@
     <div
       :class="`avatar-circle mx-auto mx-sm-0 mb-3 mb-sm-0 bg-${item.color}-transparent`"
     >
-      <img :src="item.picture" :alt="`Picture ${item.title}`" />
+      <img
+        :src="require(`@/assets/images/${item.picture}`)"
+        :alt="`Picture ${item.title}`"
+      />
     </div>
     <div class="ms-3 text-white">
       <h5>

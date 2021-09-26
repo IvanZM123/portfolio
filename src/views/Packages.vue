@@ -5,10 +5,10 @@
       style="min-height: 85vh"
     >
       <div class="col-12 col-sm-8 col-md-6 col-xl-4">
-        <div class="card border-0 text-center">
+        <div class="card border-0 text-center" v-animation data-effect="scale">
           <picture>
             <img
-              src="https://cdn-icons-png.flaticon.com/512/1378/1378644.png"
+              :src="require('@/assets/images/coming-soon-icon.png')"
               alt="Picture"
             />
           </picture>

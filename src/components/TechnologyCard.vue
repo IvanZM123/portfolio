@@ -7,7 +7,7 @@
       <div class="row my-2">
         <div class="col-12 col-md-3">
           <img
-            :src="technology.picture"
+            :src="require(`@/assets/images/${technology.picture}`)"
             class="d-block mx-auto"
             alt="Picture"
           />
