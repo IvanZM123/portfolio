@@ -9,6 +9,21 @@
         </div>
       </section>
 
+      <section>
+        <div class="row justify-content-center">
+          <div
+            v-animation
+            data-effect="scale"
+            :data-delay="i * 0.1"
+            v-for="(item, i) in items"
+            :key="i"
+            class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
+          >
+            <item-card :item="item" />
+          </div>
+        </div>
+      </section>
+
       <section class="py-4">
         <container-dynamic
           title="Technologies"
@@ -27,21 +42,6 @@
             </div>
           </div>
         </container-dynamic>
-      </section>
-
-      <section class="py-4">
-        <div class="row justify-content-center">
-          <div
-            class="col-12 col-sm-6 col-md-4 col-xl-3 p-3"
-            v-for="(item, i) in sections"
-            :key="i"
-            v-animation
-            data-effect="scale"
-            :data-delay="i * 0.15"
-          >
-            <item-card v-bind:item="item" />
-          </div>
-        </div>
       </section>
 
       <section>
@@ -95,8 +95,6 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
-import { Section } from "@/services/section.service";
-
 import { apps, App } from "@/mock/apps.mock";
 import { articles, Article } from "@/mock/articles.mock";
 import { technologies, Technology } from "@/mock/technologies.mock";
@@ -129,7 +127,29 @@ export default class Home extends Vue {
       color: "purple",
     },
   ];
-  sections: Array<Section> = [];
+  items = [
+    {
+      title: "Top apps",
+      subtitle: `${apps.length} apps found.`,
+      picture: "https://cdn-icons-png.flaticon.com/512/3419/3419222.png",
+      color: "ocean",
+      route: "Apps",
+    },
+    {
+      title: "My articles",
+      subtitle: `${articles.length} apps found`,
+      picture: "https://cdn-icons-png.flaticon.com/512/4229/4229811.png",
+      color: "yellow",
+      route: "Articles",
+    },
+    {
+      title: "My packages",
+      subtitle: `${0} packages found`,
+      picture: "https://cdn-icons-png.flaticon.com/512/600/600186.png",
+      color: "brown",
+      route: "Packages",
+    },
+  ];
 
   get apps(): App[] {
     return apps.slice(0, 3);

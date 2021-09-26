@@ -2,7 +2,7 @@
   <div :class="`card border-0 p-3 bg-${item.color}-transparent`">
     <div class="card-body text-center">
       <div :class="`card-avatar mb-2 p-3 bg-${item.color}`">
-        <img :src="item.image" alt="Proyects" />
+        <img :src="item.picture" alt="Proyects" />
       </div>
       <h5>
         <strong>{{ item.title }}</strong>
