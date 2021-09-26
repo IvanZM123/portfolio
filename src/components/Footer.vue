@@ -3,17 +3,16 @@
     <footer>
       <div class="card border-0 bg-darken pt-5">
         <div class="container">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-12 col-md-7 col-xl-8 p-3">
-              <h1 class="text-white">
+              <h1>
                 <strong>{Portfolio}</strong>
               </h1>
-              <p class="text-muted py-3">
-                This is my portfolio, in which you will find some of the
-                technologies that I can handle, encompassing frameworks,
-                libraries, design patterns, interface design, among others. As
-                you will find the most representative projects of what I am
-                capable of offering.
+              <p class="text-muted py-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+                dolore consectetur quis eligendi accusantium quas sunt dolorum
+                repellat vitae odit veritatis maxime nihil ratione, debitis
+                assumenda! Illum amet iusto quae!
               </p>
               <div class="d-flex align-items-center">
                 <a
@@ -43,13 +42,14 @@
               />
               <a
                 href="mailto:ivanzaldivar16@gmail.com"
-                class="btn btn-light w-100 rounded-pill my-3"
+                class="btn btn-light w-100 rounded-pill border-0 my-3"
                 >Contact me</a
               >
             </div>
             <div class="col-12">
-              <p class="text-white">
-                © {{ new Date().getFullYear() }} Portfolio
+              <p>
+                © {{ new Date().getFullYear() }} Portfolio. Created by
+                <strong>Ivan Zaldivar</strong>
               </p>
             </div>
           </div>

@@ -2,7 +2,7 @@
   <div class="app">
     <navbar />
 
-    <main class="container-fluid">
+    <main class="container-fluid mt-3 mb-5">
       <router-view />
     </main>
 

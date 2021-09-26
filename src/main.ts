@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-import "@/assets/styles/styles.css";
+import "@/assets/css/style.css";
 
 import { animation } from "@/directives/animation.directive";
 
