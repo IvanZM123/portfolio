@@ -8,7 +8,7 @@
         v-animation
         data-effect="fade-and-displacement-right"
         data-delay=".3"
-        class="text-purple"
+        class="text-muted"
       >
         {{ subtitle }}
       </p>

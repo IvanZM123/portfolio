@@ -164,9 +164,3 @@ export default class AppDetails extends Vue {
   }
 }
 </script>
-
-<style scoped>
-img {
-  object-fit: cover;
-}
-</style>

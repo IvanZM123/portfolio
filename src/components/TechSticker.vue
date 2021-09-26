@@ -1,6 +1,10 @@
 <template>
-  <li class="list-group-item d-sm-flex align-items-center bg-darken border-0 my-2">
-    <div :class="`avatar-circle mx-auto mx-sm-0 mb-3 mb-sm-0 bg-${item.color}-transparent`">
+  <li
+    class="list-group-item d-sm-flex align-items-center bg-darken border-0 my-2"
+  >
+    <div
+      :class="`avatar-circle mx-auto mx-sm-0 mb-3 mb-sm-0 bg-${item.color}-transparent`"
+    >
       <img :src="item.picture" :alt="`Picture ${item.title}`" />
     </div>
     <div class="ms-3 text-white">
@@ -33,10 +37,5 @@ export default class TechSticker extends Vue {}
   height: 55px;
   width: 55px;
   padding: 15px;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 </style>

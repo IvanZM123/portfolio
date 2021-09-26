@@ -61,11 +61,6 @@ export default class ArticleCard extends Vue {}
   width: 100%;
   height: 230px;
 }
-.card-body-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .card-body-content {
   position: absolute;
   content: "";
@@ -78,9 +73,5 @@ export default class ArticleCard extends Vue {}
   top: 0;
   width: 100%;
   height: 100%;
-}
-.chip {
-  padding: 5px 10px;
-  border-radius: 5px;
 }
 </style>

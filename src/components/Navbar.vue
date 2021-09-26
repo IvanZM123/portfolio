@@ -71,9 +71,3 @@ export default class NavbarComponent extends Vue {
   ];
 }
 </script>
-
-<style scoped>
-a {
-  text-decoration: none;
-}
-</style>

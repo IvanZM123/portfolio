@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
 
 import "@/assets/styles/styles.css";
 
@@ -11,4 +10,4 @@ const VueApp = createApp(App);
 
 VueApp.directive("animation", animation);
 
-VueApp.use(store).use(router).mount("#app");
+VueApp.use(router).mount("#app");

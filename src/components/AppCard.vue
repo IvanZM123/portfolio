@@ -3,23 +3,23 @@
     :to="{ name: 'Apps-Details', params: { appId: app.slug } }"
     class="text-decoration-none"
   >
-    <div class="card p-2 px-3 bg-darken shadow" style="border-radius: 20px">
+    <div class="card p-2 px-3 bg-darken shadow radius-20">
       <div class="card-header border-0 bg-darken px-0">
-        <div class="card-banner">
+        <div class="card-banner radius-20">
           <img :src="app.picture" :alt="app.title" />
         </div>
       </div>
       <div class="card-body px-0">
         <div class="d-flex flex-wrap w-100 mb-3">
           <small
-            :class="`text-${item.color} mx-1`"
+            class="text-muted mx-1"
             v-for="(item, i) in app.technologies || 0"
             :key="i"
           >
             <strong>{{ item.name }}</strong>
           </small>
         </div>
-        <p class="mb-2 text-purple">
+        <p class="mb-2">
           <strong>{{ app.title }} - {{ app.subtitle }}</strong>
         </p>
         <div class="card-description">
@@ -50,15 +50,9 @@ export default class AppCard extends Vue {}
   transform: scale(1.03);
 }
 .card-banner {
-  border-radius: 20px;
   width: 100%;
   height: 170px;
   overflow: hidden;
-}
-.card-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .chip {
   padding: 5px 15px;

@@ -100,7 +100,8 @@ export const technologies: Technology[] = [
   {
     id: 12,
     name: "Vuetify",
-    description: "Is a Vue UI Library with beautifully handcrafted Material Components",
+    description:
+      "Is a Vue UI Library with beautifully handcrafted Material Components",
     color: "ocean",
     picture: "https://iconape.com/wp-content/png_logo_vector/vuetify.png",
   },
@@ -110,6 +111,6 @@ export const technologies: Technology[] = [
     description: "A scientific yet simple approach to weather forecast.",
     color: "yellow",
     picture:
-      "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/logo_60x60.png"
+      "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/logo_60x60.png",
   },
 ];

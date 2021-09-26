@@ -79,39 +79,27 @@ export default class Carousel extends Vue {}
 <style scoped>
 .card {
   border-radius: 35px;
-  /* background-color: rgba(140, 82, 255, 0.1); */
 }
-
 .card h1 {
   font-size: 25px;
   font-weight: bold;
 }
-
-.bg-purple {
-  background-color: #8c52ff;
-}
-
 .circle {
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
-
 .rectangle {
   width: 50%;
   height: 10px;
   border-radius: 10px;
 }
-
 .box {
-  /* background-color: #8c52ff; */
   width: 50%;
 }
-
 .section-img {
   position: relative;
 }
-
 .box img {
   border-radius: 50%;
   position: absolute;

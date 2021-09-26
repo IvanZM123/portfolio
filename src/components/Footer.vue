@@ -89,5 +89,6 @@ export default class Footer extends Vue {
 <style scoped>
 img {
   width: 200px;
+  object-fit: contain;
 }
 </style>
