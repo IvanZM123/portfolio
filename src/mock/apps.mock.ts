@@ -64,7 +64,7 @@ export const apps: Array<App> = [
         color: "brown",
       },
     ],
-    technologies: filterEntities(technologies, [3, 4]),
+    technologies: filterEntities(technologies, [3, 4, 9, 10, 11, 7]),
     color: "ocean",
     slug: "vuochat",
   },
@@ -106,6 +106,28 @@ export const apps: Array<App> = [
   },
   {
     id: 3,
+    title: "NgBusiness",
+    subtitle: "Ecommerce",
+    description:
+      "A web application developed with Node.js and Angular, which simulates the behavior of an ecommerce.",
+    picture:
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/dashboard_ljbdio.png",
+    images: [
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/dashboard_ljbdio.png",
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/products_drsysl.png",
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/orders_iu95bv.png",
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/customers_sl33ei.png",
+    ],
+    videos: [],
+    githubUrl: "https://github.com/IvanZM123/ngbusiness",
+    demoUrl: "https://ngbusiness.netlify.app",
+    technologies: filterEntities(technologies, [1, 4, 8, 7]),
+    features: [],
+    color: "purple",
+    slug: "ngbusiness",
+  },
+  {
+    id: 4,
     title: "Kampweather",
     subtitle: "Weather app",
     description:

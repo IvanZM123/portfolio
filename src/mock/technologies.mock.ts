@@ -59,4 +59,42 @@ export const technologies: Technology[] = [
     picture:
       "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
   },
+  {
+    id: 7,
+    name: "Bootstrap",
+    description: "It is a library dedicated to styling web pages.",
+    color: "purple",
+    picture: "https://i.stack.imgur.com/C9301.png",
+  },
+  {
+    id: 8,
+    name: "Angular Material",
+    description:
+      "Is a web component library with a Material design design, a style guide created by Google",
+    color: "yellow",
+    picture: "https://material.angular.io/assets/img/angular-material-logo.svg",
+  },
+  {
+    id: 9,
+    name: "MongoDB",
+    description:
+      "Is a document database that offers great scalability and flexibility.",
+    color: "green-light",
+    picture: "https://img.icons8.com/color/480/mongodb.png",
+  },
+  {
+    id: 10,
+    name: "Webpack",
+    description: "Webpack is defined as a module packer",
+    color: "ocean",
+    picture: "https://hsto.org/webt/k-/tm/2g/k-tm2gvbb_ky6gdrd-tzqrzjkf4.png",
+  },
+  {
+    id: 11,
+    name: "SocketIO",
+    description:
+      "It is a library that will help us build applications with a persistent connection between client and server",
+    color: "darken",
+    picture: "https://cdn.worldvectorlogo.com/logos/socket-io.svg",
+  },
 ];
