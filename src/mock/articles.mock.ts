@@ -19,7 +19,7 @@ export const articles: Array<Article> = [
       "https://res.cloudinary.com/practicaldev/image/fetch/s--Z2jDyXvw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3tavsbki7n7etzlgjn7h.png",
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feather-js-and-node-js-4had",
     tags: ["Feathers.js", "Node.js", "Typescript"],
-    date: "9 Sep 2021",
+    date: "2 Sep 2021",
     color: "blue",
   },
   {
@@ -31,7 +31,7 @@ export const articles: Array<Article> = [
       "https://res.cloudinary.com/practicaldev/image/fetch/s--RSMvwHxC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s1x6u5xuigl873g8wp9z.png",
     url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feathers-js-frontend-using-vue-js-4n9c",
     tags: ["Feathers.js", "Node.js", "Typescript", "Vue.js"],
-    date: "2 Sep 2021",
+    date: "9 Sep 2021",
     color: "green-aqua",
   },
   {
@@ -48,14 +48,14 @@ export const articles: Array<Article> = [
   },
   {
     id: 4,
-    title: "How to setup email verification in Feathers.js - Angular",
+    title: "Building ToDo in Real-Time",
     subtitle:
-      "This is the second part of How to setup email verification in Feathers.js",
+      "I want to start with a question Have you ever wondered how applications...",
     picture:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--UXaIWvZx--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fj6btjdfhfzs7ml7o6if.png",
-    url: "https://dev.to/ivanz123/how-to-setup-email-verification-in-feathers-js-frontend-using-vue-js-4n9c",
-    tags: ["Angular", "Feathers.js", "Node.js", "Typescript"],
-    date: "9 Sep 2021",
-    color: "danger",
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--r8Tb_zBo--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pz0fu8sdq4iqtj0o7y5a.png",
+    url: "https://dev.to/ivanz123/building-todo-in-real-time-3pbl",
+    tags: ["Feathers.js", "Node.js", "Typescript"],
+    date: "27 Sep 2021",
+    color: "darken",
   },
 ];

@@ -25,6 +25,7 @@ import { articles, Article } from "@/mock/articles.mock";
 
 import ArticleCard from "@/components/ArticleCard.vue";
 import Carousel from "@/components/Carousel.vue";
+import { sortItems } from "@/utils/helpers";
 
 @Options({
   components: {
@@ -36,7 +37,7 @@ export default class ArticlesPage extends Vue {
   articles: Article[] = articles;
 
   get items(): Article[] {
-    return articles.slice(0, 3);
+    return sortItems(articles, "date", "DESC");
   }
 }
 </script>

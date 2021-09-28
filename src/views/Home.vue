@@ -105,6 +105,7 @@ import ArticleCard from "@/components/ArticleCard.vue";
 import Carousel from "@/components/Carousel.vue";
 import ItemCard from "@/components/ItemCard.vue";
 import AppCard from "@/components/AppCard.vue";
+import { sortItems } from "@/utils/helpers";
 
 @Options({
   components: {
@@ -156,7 +157,7 @@ export default class Home extends Vue {
   }
 
   get articles(): Article[] {
-    return articles.slice(0, 3);
+    return sortItems(articles, "date", "DESC").slice(0, 3);
   }
 
   get technologies(): Technology[] {
