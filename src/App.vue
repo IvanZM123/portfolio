@@ -24,3 +24,9 @@ import FooterComponent from "@/components/Footer.vue";
 })
 export default class App extends Vue {}
 </script>
+
+<style scoped>
+main {
+  min-height: 100vh;
+}
+</style>

@@ -58,4 +58,14 @@ export const articles: Array<Article> = [
     date: "27 Sep 2021",
     color: "darken",
   },
+  {
+    id: 5,
+    title: "Resources that every developer should know",
+    subtitle: "Hi guys! I have created this publication, because I wanted to share some tools...",
+    picture: "https://res.cloudinary.com/practicaldev/image/fetch/s--oPVFlPvq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fzya5c7inkadw9zeec5g.png",
+    url: "https://dev.to/ivanz123/resources-that-every-developer-should-know-3jkd",
+    tags: ["Productivity", "Programming", "Tooling", "Webdev"],
+    date: "3 Oct 2021",
+    color: "purple",
+  },
 ];
