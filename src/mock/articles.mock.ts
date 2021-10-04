@@ -66,6 +66,6 @@ export const articles: Array<Article> = [
     url: "https://dev.to/ivanz123/resources-that-every-developer-should-know-3jkd",
     tags: ["Productivity", "Programming", "Tooling", "Webdev"],
     date: "3 Oct 2021",
-    color: "purple",
+    color: "purple-light",
   },
 ];
