@@ -13,7 +13,7 @@
         <div class="d-flex flex-wrap w-100 mb-3">
           <small
             class="text-muted mx-1"
-            v-for="(item, i) in app.technologies || 0"
+            v-for="(item, i) in technologies || 0"
             :key="i"
           >
             <strong>{{ item.name }}</strong>
@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts">
+import { Technology } from "@/mock/technologies.mock";
 import { Options, Vue } from "vue-class-component";
 
 @Options({
@@ -38,7 +39,13 @@ import { Options, Vue } from "vue-class-component";
     app: Object,
   },
 })
-export default class AppCard extends Vue {}
+export default class AppCard extends Vue {
+  get technologies(): Technology[] {
+    const items = (this as any).app.technologies as Technology[];
+    const copies = items.slice();
+    return copies.splice(0, 3);
+  }
+}
 </script>
 
 <style scoped>
