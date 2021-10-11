@@ -9,10 +9,11 @@
                 <strong>{Portfolio}</strong>
               </h1>
               <p class="text-muted py-2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
-                dolore consectetur quis eligendi accusantium quas sunt dolorum
-                repellat vitae odit veritatis maxime nihil ratione, debitis
-                assumenda! Illum amet iusto quae!
+                This is my portfolio, in which you will find some of the
+                technologies that I can handle, encompassing frameworks,
+                libraries, design patterns, interface design, among others. As
+                you will find the most representative projects of what I am
+                capable of offering.
               </p>
               <div class="d-flex align-items-center">
                 <a
