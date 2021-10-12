@@ -68,4 +68,14 @@ export const articles: Array<Article> = [
     date: "3 Oct 2021",
     color: "purple-light",
   },
+  {
+    id: 6,
+    title: "Learn to use Decorators once and for all",
+    subtitle: "Hi Developers! How are you? I hope everyone is well. A few weeks ago I begin...",
+    picture: "https://res.cloudinary.com/practicaldev/image/fetch/s--vKC8qPJc--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/au6sgpa6mvigyp4xdd8d.png",
+    url: "https://dev.to/ivanz123/learn-to-use-decorators-once-and-for-all-4l0o",
+    tags: ["Typescript", "Tutorial", "Programming"],
+    date: "12 Oct 2021",
+    color: "blue",
+  },
 ];
