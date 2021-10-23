@@ -78,4 +78,14 @@ export const articles: Array<Article> = [
     date: "12 Oct 2021",
     color: "blue",
   },
+  {
+    id: 6,
+    title: "Stop using Javascript",
+    subtitle: "Hello dear friend. I know that the publication has been entered by title.",
+    picture: "https://res.cloudinary.com/practicaldev/image/fetch/s--V_6EEUc_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f48kxcc4ygarz1td2b1a.png",
+    url: "https://dev.to/ivanz123/stop-using-javascript-1m1f",
+    tags: ["Discuss", "Javascript", "Typescript", "Tutorial", "Webdev"],
+    date: "23 Oct 2021",
+    color: "darken",
+  },
 ];
