@@ -50,6 +50,7 @@
             <container-dynamic
               title="Top Applications"
               subtitle="Take a look at the top apps"
+              :pathName="'Apps'"
             >
               <slot>
                 <div class="row">
@@ -71,6 +72,7 @@
             <container-dynamic
               title="Some Articles"
               subtitle="These are some of my articles."
+              :pathName="'Articles'"
             >
               <div class="row">
                 <div
