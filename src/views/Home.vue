@@ -108,6 +108,7 @@ import Carousel from "@/components/Carousel.vue";
 import ItemCard from "@/components/ItemCard.vue";
 import AppCard from "@/components/AppCard.vue";
 import { sortItems } from "@/utils/helpers";
+import { packages } from "@/mock/packages.mock";
 
 @Options({
   components: {
@@ -147,7 +148,7 @@ export default class Home extends Vue {
     },
     {
       title: "My packages",
-      subtitle: `${0} packages found`,
+      subtitle: `${packages.length} packages found`,
       picture: "packages-icon.png",
       color: "brown",
       route: "Packages",
