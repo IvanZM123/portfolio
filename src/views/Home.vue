@@ -44,51 +44,69 @@
         </container-dynamic>
       </section>
 
-      <section>
-        <div class="row">
-          <div class="col-12 p-3">
-            <container-dynamic
-              title="Top Applications"
-              subtitle="Take a look at the top apps"
-              :pathName="'Apps'"
-            >
-              <slot>
-                <div class="row">
-                  <div
-                    class="col-12 col-sm-6 col-lg-4 p-3"
-                    v-for="(app, i) in apps"
-                    :key="i"
-                    v-animation
-                    data-effect="scale"
-                    :data-delay="i * 0.2"
-                  >
-                    <app-card v-bind:app="app" />
-                  </div>
-                </div>
-              </slot>
-            </container-dynamic>
-          </div>
-          <div class="col-12 p-3">
-            <container-dynamic
-              title="Some Articles"
-              subtitle="These are some of my articles."
-              :pathName="'Articles'"
-            >
-              <div class="row">
-                <div
-                  v-for="(item, i) in articles"
-                  :key="i"
-                  class="col-12 col-md-6 col-lg-4 p-3"
-                  v-animation
-                  data-effect="scale"
-                  :data-delay="i * 0.15"
-                >
-                  <article-card :article="item" />
-                </div>
+      <section class="py-4">
+        <container-dynamic
+          title="Top Applications"
+          subtitle="Take a look at the top apps"
+          :pathName="'Apps'"
+        >
+          <slot>
+            <div class="row">
+              <div
+                class="col-12 col-sm-6 col-lg-4 p-3"
+                v-for="(app, i) in apps"
+                :key="i"
+                v-animation
+                data-effect="scale"
+                :data-delay="i * 0.2"
+              >
+                <app-card v-bind:app="app" />
               </div>
-            </container-dynamic>
+            </div>
+          </slot>
+        </container-dynamic>
+      </section>
+
+      <section>
+        <container-dynamic
+          title="Beautiful Packages"
+          subtitle="All packages that help the community continue to grow"
+          pathName="Packages"
+        >
+          <div class="row">
+            <div
+              v-for="(item, i) in packages"
+              :key="i"
+              class="col-12 col-sm-6 col-lg-4 p-3"
+              v-animation
+              data-effect="scale"
+              :data-delay="i * 0.15"
+            >
+              <package-card :item="item" />
+            </div>
           </div>
-        </div>
+        </container-dynamic>
+      </section>
+
+      <section class="py-4">
+        <container-dynamic
+          title="Some Articles"
+          subtitle="These are some of my articles."
+          :pathName="'Articles'"
+        >
+          <div class="row">
+            <div
+              v-for="(item, i) in articles"
+              :key="i"
+              class="col-12 col-md-6 col-lg-4 p-3"
+              v-animation
+              data-effect="scale"
+              :data-delay="i * 0.15"
+            >
+              <article-card :article="item" />
+            </div>
+          </div>
+        </container-dynamic>
       </section>
     </div>
   </div>
@@ -97,18 +115,20 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
+import { sortItems } from "@/utils/helpers";
+
 import { apps, App } from "@/mock/apps.mock";
 import { articles, Article } from "@/mock/articles.mock";
 import { technologies, Technology } from "@/mock/technologies.mock";
+import { packages, Package } from "@/mock/packages.mock";
 
 import ContainerDynamic from "@/components/ContainerDynamic.vue";
 import TechnologyCard from "@/components/TechnologyCard.vue";
+import PackageCard from "@/components/PackageCard.vue";
 import ArticleCard from "@/components/ArticleCard.vue";
 import Carousel from "@/components/Carousel.vue";
 import ItemCard from "@/components/ItemCard.vue";
 import AppCard from "@/components/AppCard.vue";
-import { sortItems } from "@/utils/helpers";
-import { packages } from "@/mock/packages.mock";
 
 @Options({
   components: {
@@ -118,6 +138,7 @@ import { packages } from "@/mock/packages.mock";
     AppCard,
     ArticleCard,
     TechnologyCard,
+    PackageCard,
   },
 })
 export default class Home extends Vue {
@@ -165,6 +186,10 @@ export default class Home extends Vue {
 
   get technologies(): Technology[] {
     return technologies.slice(0, 6);
+  }
+
+  get packages(): Package[] {
+    return packages.slice(0, 6);
   }
 }
 </script>
