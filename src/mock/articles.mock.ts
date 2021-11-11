@@ -88,4 +88,14 @@ export const articles: Array<Article> = [
     date: "23 Oct 2021",
     color: "darken",
   },
+  {
+    id: 7,
+    title: "Learn to test your packages NPM locally",
+    subtitle: "Hi guys! In this post we are going to learn how to test the NPM package before.",
+    picture: "https://res.cloudinary.com/practicaldev/image/fetch/s--v2Eh7MED--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1i7wu5tvwz3okueykkdq.png",
+    url: "https://dev.to/ivanz123/learn-to-test-your-packages-npm-locally-523a",
+    tags: ["npm", "tutorial", "beginners", "opensource"],
+    date: "11 Nov 2021",
+    color: "brown",
+  },
 ];
