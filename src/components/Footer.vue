@@ -72,7 +72,7 @@ interface Item {
 export default class Footer extends Vue {
   items: Item[] = [
     {
-      url: "https://twitter.com/ToSatn2",
+      url: "https://twitter.com/IvanZM123",
       icon: "twitter",
     },
     {
@@ -80,7 +80,7 @@ export default class Footer extends Vue {
       icon: "github",
     },
     {
-      url: "https://dev.to/ivanz123",
+      url: "https://dev.to/ivanzm123",
       icon: "dev-to",
     },
   ];
