@@ -2,6 +2,10 @@
 .bg-danger-transparent {
     background-color: rgba(234, 32, 39, 0.4);
 }
+.bg-grey-transparent {
+  background-color: rgb(225, 225, 225);
+  color: rgb(96, 96, 96);
+}
 .bg-red-transparent {
     background-color: rgba(234, 32, 39, .4);
 }
@@ -60,6 +64,9 @@
 }
 .bg-blue {
   background-color: #0079c7;
+}
+.bg-grey {
+  background-color: rgb(192, 192, 192);
 }
 .bg-green-aqua {
   background-color: rgba(29, 151, 98);
