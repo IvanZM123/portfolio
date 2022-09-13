@@ -45,7 +45,7 @@ export default class PackageCard extends Vue {}
 }
 .card-picture > img {
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 20px 20px 0px 0px;
 }
 .logo {

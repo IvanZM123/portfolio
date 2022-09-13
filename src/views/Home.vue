@@ -147,8 +147,7 @@ export default class Home extends Vue {
       title: "I'm Fullstack Developer",
       subtitle:
         "I can handle Backend, Frontend and interface design technologies. If solutions are what you want, that's my middle name.",
-      picture:
-        "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1634083523/Portfolio/main-banner-one_w3y3jg.png",
+      picture: "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1663095833/Portfolio/developer_njf6or.svg",
       color: "blue",
     },
   ];

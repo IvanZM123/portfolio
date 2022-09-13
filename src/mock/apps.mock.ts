@@ -33,7 +33,7 @@ export const apps: Array<App> = [
     description:
       "Vuochat is an instant messaging web application. It is developed in Node.js and Typescript. It incorporates authentication through social networks using Passport.js, and real-time communication is possible thanks to Socket.io",
     picture:
-      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1612023023/App_banners/vuochat_users_q6v2tu.png",
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1663095946/Portfolio/vuochat_mqwmsd.png",
     images: [],
     videos: [],
     githubUrl: "https://github.com/IvanZM123/vuochat",
@@ -68,42 +68,42 @@ export const apps: Array<App> = [
     color: "ocean",
     slug: "vuochat",
   },
-  {
-    id: 2,
-    title: "VuoCommerce",
-    subtitle: "Ecommerce",
-    description:
-      "It is an application with Real Time Communication, it is developed with Node.js, Feathers.js, Vue.js and other additional technologies. If you want to know how it works",
-    picture:
-      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1625388981/App_banners/products-page_jgjjzt.png",
-    images: [],
-    videos: [],
-    githubUrl: "https://github.com/IvanZM123/ecommerce",
-    demoUrl: "https://vuejscommerce.herokuapp.com",
-    technologies: filterEntities(technologies, [2, 3, 4, 11, 12]),
-    features: [
-      {
-        title: "Real-Time",
-        description: "More connected than ever, allows instant changes.",
-        icon: "stopwatch",
-        color: "yellow",
-      },
-      {
-        title: "Authentication",
-        description: "User authentication is done through JWT.",
-        icon: "check-shield",
-        color: "green-light",
-      },
-      {
-        title: "Management Roles",
-        description: "Role management is allowed, so you have full control.",
-        icon: "group",
-        color: "danger",
-      },
-    ],
-    color: "darken",
-    slug: "vuocommerce",
-  },
+  // {
+  //   id: 2,
+  //   title: "VuoCommerce",
+  //   subtitle: "Ecommerce",
+  //   description:
+  //     "It is an application with Real Time Communication, it is developed with Node.js, Feathers.js, Vue.js and other additional technologies. If you want to know how it works",
+  //   picture:
+  //     "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1625388981/App_banners/products-page_jgjjzt.png",
+  //   images: [],
+  //   videos: [],
+  //   githubUrl: "https://github.com/IvanZM123/ecommerce",
+  //   demoUrl: "https://vuejscommerce.herokuapp.com",
+  //   technologies: filterEntities(technologies, [2, 3, 4, 11, 12]),
+  //   features: [
+  //     {
+  //       title: "Real-Time",
+  //       description: "More connected than ever, allows instant changes.",
+  //       icon: "stopwatch",
+  //       color: "yellow",
+  //     },
+  //     {
+  //       title: "Authentication",
+  //       description: "User authentication is done through JWT.",
+  //       icon: "check-shield",
+  //       color: "green-light",
+  //     },
+  //     {
+  //       title: "Management Roles",
+  //       description: "Role management is allowed, so you have full control.",
+  //       icon: "group",
+  //       color: "danger",
+  //     },
+  //   ],
+  //   color: "darken",
+  //   slug: "vuocommerce",
+  // },
   {
     id: 3,
     title: "NgBusiness",
@@ -111,7 +111,7 @@ export const apps: Array<App> = [
     description:
       "A web application developed with Node.js and Angular, which simulates the behavior of an ecommerce.",
     picture:
-      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/dashboard_ljbdio.png",
+      "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1663096213/Portfolio/ngbusiness_gzkxu0.png",
     images: [
       "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/dashboard_ljbdio.png",
       "https://res.cloudinary.com/dlkfpx8lb/image/upload/v1632641411/App_banners/products_drsysl.png",
